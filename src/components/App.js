@@ -36,11 +36,10 @@ class App extends React.Component {
 		// method 1: using promises
 		const response = await unsplash
 		.get('/search/photos', {
-			params: { query: term }	
+			params: { query: term }
 		});
-		this.setState({
-			images: response.data.results
-		});
+
+		this.setState({ images: response.data.results });
 	}
 
 	render() {
